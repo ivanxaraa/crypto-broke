@@ -1,0 +1,573 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200&display=swap');
+
+
+body{
+  background-color: var(--backgroundColor);
+  
+}
+
+.dentro{  
+  margin-left: 300px;
+  margin-right: 300px;  
+}
+
+.background{
+  width: 100%;
+  height: 100%;
+}
+
+.background-circle{
+  position: absolute;
+  border-radius: 100%;
+  width: 800px;
+  height: 800px;  
+  left: -150;
+  right: 0;
+  background-color: var(--BackgroundCircles);
+  z-index: -1;
+}
+
+.background-circle2{
+  position: absolute;
+  border-radius: 100%;
+  width: 600px;
+  height: 600px;  
+  left: 150px;
+  right: 0;
+  top: 1000px;
+  background-color: var(--BackgroundCircles);
+  z-index: -1;
+}
+
+
+
+.marketcap-container{
+  margin: auto;  
+  width: 1300px;
+  height: 100px;
+  margin-bottom: 50px;
+  display: flex;
+  align-items: center;
+}
+
+
+
+
+
+.marketcap-left{  
+  color: white;
+  width: 80%;
+  height: 100%;  
+  animation: marketCapLeft 1s;
+}
+
+.marketcap-left-title{  
+  width: 100%;
+  height: 50%;  
+  display: flex;
+  align-items: center;
+
+}
+
+.marketcap-left-title img{
+  width: 30px;
+  margin-right: 8px;
+  transition: transform 0.4s;
+}
+
+.marketcap-left-title img:hover{
+  transform: scale(0.95);
+  opacity: 0.9;
+  cursor: pointer;  
+}
+
+
+.marketcap-left-text{
+  width: 100%;
+  height: 50%;  
+}
+
+
+
+.marketcap-right{
+  display: flex;  
+  width: 20%;  
+  height: 100%;  
+  align-items: center;
+  justify-content: end;  
+  animation: marketCapRight 1s;
+}
+
+.marketcap-right span{
+  color: white;
+  margin-right: 15px;
+  font-weight: bold;
+}
+
+
+
+.changeMarketCapCoin{
+  position: absolute;    
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;  
+}
+
+.changeMarketCapCoin-overlay{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: var(--Overlay);
+}
+
+.changeMarketCapCoin-container{
+  transition: changeMarketCap 1s;
+  width: 250px;
+  height: 500px;
+  background-color: var(--backgroundColor);
+  margin-left: 25px;
+  margin-top: 100px;
+  border-radius: 16px; 
+  
+}
+
+.changeMarketCapCoin-coins{
+  overflow-y: scroll;    
+  height: 420px;
+  padding-right: 15px;
+}
+
+
+.changeMarketCapCoin-text{
+  padding: 15px 15px 15px 15px;
+  color: white;
+}
+
+.changeMarketCapCoin-header{  
+  width: 100%;
+  height: 30px;
+  margin-bottom: 20px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.changeMarketCapCoin-header-icon{
+  width: 15px;
+  position: absolute;
+  margin-left: 90px;
+  margin-top: 4px;
+  transition: 0.2s;
+}
+
+.changeMarketCapCoin-header-icon:hover{
+  color: rgba(255, 255, 255, 0.644);
+  transform: scale(0.95);
+}
+
+.changeMarketCapCoin-header::after{
+  content: "";
+  display: flex;
+  width: 100%;
+  height: 2px;
+  background-color: var(--SearchBarColorVibrant);
+}
+
+
+
+.changeMarketCapCoin-box{
+  margin-bottom: 10px;
+  background-color: var(--ContainersColor);
+  display: flex;
+  align-items: center;
+  height: 35px;  
+  border-radius: 8px;  
+  font-size: 15px;
+  transition: 0.3s;
+  padding-left: 10px;
+}
+
+.changeMarketCapCoin-box:hover{
+  cursor: pointer;  
+  background-color: rgba(255, 255, 255, 0.048)
+}
+
+.changeMarketCapCoin-box img{
+  width: 25px;
+  margin-right: 10px;
+}
+
+
+
+.trending-off{  
+  outline: none;
+  border: none;
+  border-radius: 20px;  
+  width: 60px;  
+  height: 30px;
+  display: flex;
+  align-items: center;
+  background-color: transparent;
+  -moz-box-shadow:    inset 0 0 10px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.3);
+  box-shadow:         inset 0 0 10px rgba(0, 0, 0, 0.3);  
+}
+
+.trending-off-btn{  
+  width: 25px;
+  height: 25px;
+  border-radius: 20px;
+  background-color: var(--SearchBarColorVibrant);  
+  transition: 0.2s ease-out;
+}
+
+.trending-off-btn:hover{
+  cursor: pointer;
+}
+
+.trending-off-btn.active{
+  transition: 0.2s ease-out;
+  background-color: var(--BackgroundCircles);
+  margin-left: 30px;
+}
+
+
+
+.trending{
+  text-align: center;  
+  height: 180px;
+  margin: auto;
+  width: 1300px;
+  display: flex;  
+  justify-content: space-around;
+}
+
+
+.trending-container{    
+  height: 100%;
+  background-color: #28293D;
+  width: 400px;
+  border-radius: 18px;  
+  color: white;  
+  animation: Trending 1100ms;
+}
+
+
+.trending-header{
+  display: flex;
+  font-size: 20px;  
+  font-weight: bold;     
+  align-items: center;  
+}
+
+.trending-header img{
+  width: 25px;
+}
+
+.trending-title::after{
+  content: "";
+  display: flex;
+  background-color: var(--SearchBarColorVibrant);
+  width: 100%;
+  height: 2px;   
+}
+
+
+.trending-title-icon{
+  height: 16px;
+  margin-left: 5px;
+  color: #8BFF97; 
+}
+
+
+
+
+
+
+.trending-text{
+  padding: 10px 15px 10px 15px;
+}
+
+.trending-content{
+  width: 100%;
+  margin-top: 15px;
+  height: 95px;    
+}
+
+.trending-block{
+  display: flex;
+  width: 100%;
+  height: 25px;  
+  margin-bottom: 10px;  
+  align-items: center;  
+  font-size: 15px;    
+}
+
+.trending-block img{
+  width: 25px;
+  border-radius: 4px;
+  margin-right: 5px;
+}
+
+.trending-block-name{
+  text-align: left;
+  width: 69%;  
+}
+
+
+.trending-block-percent{     
+  color: #8BFF97;  
+  display: flex;  
+  width: 16%;  
+  justify-content: end;
+  }
+
+.trending-block-icon-div{  
+  display: flex;   
+  width: 20px;
+  text-align: left;
+}
+
+.trending-block-icon{
+  color: var(--ColorGreen);
+  width: 10px;
+  margin-right: 10px;  
+}
+
+
+
+#trending-container-red{
+  color: red;
+}
+
+
+.searchBar-Procurar{   
+  bottom: 35px;
+  position: relative; 
+  display: flex;
+  width: 200px;
+  color: var(--ContainersColor);  
+  height: 20px;
+  margin-left: 15px;  
+  pointer-events: none;  
+  font-size: 20px;
+  transition: 0.4s;   
+}
+
+.searchBar{  
+  margin: auto;
+  text-align: left;    
+  width: 1300px;  
+  margin-top: 80px;
+  margin-bottom: 50px;  
+  animation: SearchBar 1s;
+}
+
+.searchBar input{    
+  margin: auto;
+  outline: none;
+  border: none;    
+  width: 500px;  
+  background-color: transparent;
+  border: none;
+  border-bottom: 5px solid var(--ContainersColor);
+  color: white;
+  padding: 10px;
+  padding-left: 15px;
+  transition: 0.7s;  
+}
+
+
+.searchBar input:focus ~ .searchBar-Procurar{  
+  color: var(--SearchBarColorVibrant);
+  transform: translateY(-30px);  
+  font-size: 15px;  
+}
+
+
+.slideUp-container{
+  background-color: var(--SearchBarColorVibrant);
+  width: 50px;
+  height: 50px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  position: fixed;
+  right: 50px;
+  bottom: 50px;
+  transition: transform 0.5s;
+  animation: slideup 0.5s;
+}
+
+.slideUp-container:hover{
+  cursor: pointer;
+  transform: scale(0.98);
+}
+
+.searchBar input:focus{  
+  border-bottom: 2px solid var(--SearchBarColorVibrant);
+}
+
+
+.coin-container{  
+  height: 70px;
+  display: flex; 
+  margin: 20px auto; 
+  border-radius: 10px;
+  width: 1300px; 
+  background-color: #28293D; 
+  animation: AllCoins 1s;
+}
+
+
+
+.coin-container p{
+  align-items: center;  
+  display: flex;
+  color: white;
+  font-size: 20px;  
+}
+
+.coin-block{
+  margin-left: 20px;  
+}
+
+#coin-index{
+  font-size: 15px;  
+}
+
+.coin-container img{  
+  margin-left: 30px;
+  vertical-align: middle;
+  width: 40px;
+}
+
+.coin-container #coin-name{    
+  width: 300px;      
+}
+
+.coin-container #coin-price{
+  width: 400px;  
+  text-align: end;
+  position: relative;
+}
+
+.coin-block-changePrices{  
+  width: 390px;
+  display: flex;  
+  margin-left: 30px;
+  justify-content: start;
+}
+
+.coin-container #coin-prices24-7{    
+  align-items: center;
+  width: 150px;      
+  font-size: 15px;
+  text-align: right;  
+}
+
+
+
+
+
+
+
+
+@keyframes marketCapLeft{
+
+  0%{
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+
+  100%{
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+}
+
+@keyframes marketCapRight{
+
+  0%{
+    opacity: 0;
+    transform: translateX(200%);
+  }
+
+  100%{
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+}
+
+@keyframes Trending{
+
+  0%{
+    opacity: 0;
+    transform: translateY(-100%);
+  } 
+
+  100%{
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+}
+
+
+@keyframes SearchBar{
+
+  0%{
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+
+  100%{
+    opacity: 1;
+    transform: 0;
+  }
+
+}
+
+@keyframes AllCoins{
+
+  0%{
+    opacity: 0;
+    transform: translateY(300%);
+  }
+
+  100%{
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+}
+
+@keyframes changeMarketCap{
+
+  0%{
+    opacity: 0;
+    transform: translateY(300%);
+  }
+
+  100%{
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+}
+
+@keyframes slideup{
+  0%{
+    opacity: 0;
+    transform: translateY(200%);
+  }
+
+  100%{
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

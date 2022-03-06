@@ -1,0 +1,12 @@
+*{
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    --backgroundColor: #1B1C27;
+    --ContainersColor: #28293D;
+    --SearchBarColorVibrant: #e91e63;
+    --Trendings: #22233a;
+    --ColorGreen: #8BFF97;
+    --ColorRed: #8BFF97;
+    --Overlay: rgba(0, 0, 0, 0.3);
+    --BackgroundCircles: #ff8ba404;
+  }
